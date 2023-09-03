@@ -1,0 +1,122 @@
+@use "../../styles/data" as *;
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 25px 100px 0 100px;
+    box-sizing: border-box;
+
+    
+    .logo {
+        a {
+            color: white;
+            text-decoration: none;
+            transition: 0.5s;
+            &:hover {
+                text-shadow: 0px 0px 20px white;
+            }
+        }
+    }
+
+    .links-container {
+
+        @media (max-width: 1449px) {
+
+            &__closed {
+                right: -100vw;
+            }
+
+            transition: 0.25s;
+            width: 100vw;
+            background-color: rgba(0, 0, 0, 0.133);
+            position: fixed;
+            right: 0;
+            top: 0;
+            height: 100%;
+            display: flex;
+            justify-content: flex-end;
+            .links {
+                background: $mainGradient;
+                box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
+
+                @media (max-width: 499px) {
+                    width: 75%;
+
+                }
+
+                @media (min-width: 500px) {
+                    width: 40%;
+                }
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                align-items: center;
+                nav {
+                    ul {
+                        padding: 0;
+                        li {
+                            display: block;
+                            padding: 20px 0;
+                            text-align: center;
+                        }
+                    }
+                }
+            }
+        }
+
+        .links {
+            
+    
+          
+            @media (min-width: 1450px) {
+                align-items: center;
+                justify-content: space-between;
+                width: 40vw;
+    
+                display: flex;
+    
+                nav {
+                    ul {
+                        li {
+                            display: inline;
+                            padding: 0px 30px;
+                        }
+                    }
+                }
+            }
+          
+            
+            nav {
+                ul {
+                    list-style: none;
+                    li {
+    
+                        font-size: 16px;
+                        a {
+                            color: white;
+                            text-decoration: none;
+                            transition: 0.25s;
+                            &:hover {
+                                text-shadow: 0px 0px 5px white;
+                            }
+                        }
+                    }
+                }
+            }
+        
+            .media {
+                img {
+                    cursor: pointer;
+                    padding: 0px 10px;
+                }
+            }
+        }
+    }
+
+   
+
+    
+
+
+}

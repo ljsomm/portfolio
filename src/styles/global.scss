@@ -1,0 +1,11 @@
+@use './data' as *;
+
+* {
+    margin: 0;
+}
+
+body{
+    background: $mainGradient;
+    min-height: 100vh;
+    color: $mainColor;
+}
