@@ -22,12 +22,23 @@ const Header = () => {
                     </Link>
                 </h1>  
             </div>
+            <Image
+                className={styles["burger-icon"]}
+                src={Burger}
+                alt="burger menu"
+                onClick={() => {setIsMenuOpened(true)}}
+            ></Image>
             <div className={
                     className({
                         [styles["links-container"]]: true,
                         [styles["links-container__closed"]]: !isMenuOpenend
                     })
-                }>
+            }>
+                <div 
+                    className={styles["close-menu-area"]}
+                    onClick={() => setIsMenuOpened(false)}
+                >
+                </div>
                 <div className={styles.links}>
                     <nav>
                         <ul>
@@ -51,7 +62,6 @@ const Header = () => {
                                 title="Linkedin"
                             />
                         </Link>
-
                         <Link href="https://github.com/ljsomm">
                             <Image
                                 src={Git}

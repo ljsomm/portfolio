@@ -4,15 +4,37 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 25px 100px 0 100px;
+
+    @media (max-width: $maxMobile) {
+        padding: 20px 25px 0 25px;
+    }
+
+    @media (min-width: $minTablet) and (max-width: $maxTablet) {
+        padding: 25px 50px 0 50px;
+    }
+
+    @media (min-width: $minDesktop) {
+        padding: 25px 100px 0 100px;
+    }
+
     box-sizing: border-box;
 
+    @media (min-width: $minDesktop){
+        .burger-icon {
+            display: none;
+        }
+    }
     
     .logo {
         a {
             color: white;
             text-decoration: none;
             transition: 0.5s;
+
+            @media (max-width: $maxMobile) {
+                font-size: 25px;
+            }
+
             &:hover {
                 text-shadow: 0px 0px 20px white;
             }
@@ -21,33 +43,45 @@
 
     .links-container {
 
-        @media (max-width: 1449px) {
-
+        @media (max-width: $maxTablet) {
             &__closed {
                 right: -100vw;
             }
 
+            .close-menu-area {
+                @media (max-width: $maxMobile) {
+                    width: 25%;
+                }
+
+                @media (min-width: $minTablet) and (max-width: $maxTablet) {
+                    width: 45%;
+                }
+                background-color: rgba(0, 0, 0, 0.133);
+            }
+
             transition: 0.25s;
             width: 100vw;
-            background-color: rgba(0, 0, 0, 0.133);
             position: fixed;
             right: 0;
             top: 0;
             height: 100%;
             display: flex;
-            justify-content: flex-end;
             .links {
                 background: $mainGradient;
                 box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
 
-                @media (max-width: 499px) {
+                @media (max-width: $maxMobile) {
                     width: 75%;
-
                 }
 
-                @media (min-width: 500px) {
+                @media (min-width: $minTablet) and (max-width: $maxTablet) {
+                    width: 55%;
+                }
+
+                @media (min-width: $minDesktop) and (max-width: $maxDesktop) {
                     width: 40%;
                 }
+
                 display: flex;
                 flex-direction: column;
                 justify-content: space-around;
@@ -67,12 +101,15 @@
 
         .links {
             
-    
-          
-            @media (min-width: 1450px) {
+            @media (min-width: $minDesktop) {
                 align-items: center;
                 justify-content: space-between;
-                width: 40vw;
+
+                width: 50vw;
+               
+                @media (min-width: 1450px) {
+                    width: 40vw;
+                }
     
                 display: flex;
     
