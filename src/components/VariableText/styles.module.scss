@@ -1,0 +1,35 @@
+@keyframes twinkling {
+  from {
+    color: transparent;
+  }
+
+  to {
+    background: linear-gradient(120deg, white, rgb(255, 255, 255), white);
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.809);
+    background-clip: text;
+  }
+}
+
+.maintext-container {
+  text-align: center;
+  .maintext {
+    background: linear-gradient(120deg, white, rgb(255, 255, 255), white);
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.349);
+    font-size: 40px;
+    text-align: center;
+    display: inline;
+  }
+
+  .twinkle {
+    animation: 0.75s twinkling infinite ease;
+    font-size: 40px;
+    font-weight: 600;
+  }
+}
+
+.subtext {
+  text-align: center;
+  font-weight: 400;
+}

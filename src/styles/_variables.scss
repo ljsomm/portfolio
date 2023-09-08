@@ -4,6 +4,11 @@ $minTablet: calc($maxMobile + 1px);
 $maxTablet: 1024px;
 $minDesktop: calc($maxTablet + 1px);
 $maxDesktop: 1680px;
-
-$mainGradient: linear-gradient(120deg, #07071F, #12122C, #121136) no-repeat;
+$header: (
+  "mobile": 60px,
+  "tablet": 65px,
+  "desktop": 70px,
+);
+$mainGradient: linear-gradient(120deg, #0db159, #0a5aab, #154357) no-repeat;
+// $mainGradient: linear-gradient(120deg, #07071F, #12122C, #121136) no-repeat;
 $mainColor: white;

@@ -1,5 +1,5 @@
 const Articles = () => {
-    return ("Articles");
-}
+  return "Articles";
+};
 
 export default Articles;

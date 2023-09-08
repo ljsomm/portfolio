@@ -1,5 +1,7 @@
+import styles from "./styles.module.scss";
+
 const Projects = () => {
-    return ("Projects");
-}
+  return <div className={styles.container}>adas</div>;
+};
 
 export default Projects;

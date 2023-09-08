@@ -1,0 +1,11 @@
+@use "../../styles/data" as *;
+
+.container {
+  display: grid;
+  @media screen and (min-width: $minDesktop) {
+    grid-template-columns: 25vw 25vw 25vw;
+  }
+  gap: 40px;
+  justify-items: center;
+  justify-content: center;
+}

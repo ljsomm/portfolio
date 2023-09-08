@@ -8,5 +8,5 @@
 
 <ul>
     <li>NextJS</li>
-    <li>Sass</li>
+    <li>SCSS</li>
 </ul>

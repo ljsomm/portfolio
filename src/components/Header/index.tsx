@@ -3,78 +3,90 @@ import Burger from "../../../public/icons/burger.svg";
 import styles from "./styles.module.scss";
 import Link from "next/link";
 import Image from "next/image";
-import Linkedin from "../../../public/images/linkedin.svg";
-import Git from "../../../public/images/github.svg";
 import className from "classnames";
-
+import { useRouter } from "next/router";
+import classNames from "classnames";
+import Github from "../svg/Github";
+import Linkedin from "../svg/Linkedin";
 
 const Header = () => {
+  const menuPages = [
+    {
+      name: "Home",
+      path: "/",
+      isMenuGradient: true,
+    },
+    {
+      name: "Projects",
+      path: "/projects",
+    },
+    {
+      name: "Articles",
+      path: "/articles",
+    },
+  ];
 
+  const { pathname } = useRouter();
+  const [isMenuOpenend, setIsMenuOpened] = useState(false);
 
-    const [isMenuOpenend, setIsMenuOpened] = useState(false); 
-
-    return(
-        <header className={styles.header}>
-            <div className={styles.logo}>
-                <h1 className={styles.logo}>
-                    <Link href={"/"}>
-                        Lucas Juan
+  return (
+    <header className={styles.header}>
+      <div className={styles.logo}>
+        <h1 className={styles.logo}>
+          <Link href={"/"}>Lucas Juan</Link>
+        </h1>
+      </div>
+      <Image
+        className={styles["burger-icon"]}
+        src={Burger}
+        alt="burger menu"
+        onClick={() => {
+          setIsMenuOpened(true);
+        }}
+      ></Image>
+      <div
+        className={className({
+          [styles["links-container"]]: true,
+          [styles["links-container__closed"]]: !isMenuOpenend,
+        })}
+      >
+        <div
+          className={styles["close-menu-area"]}
+          onClick={() => setIsMenuOpened(false)}
+        ></div>
+        <div className={styles.links}>
+          <nav>
+            <ul>
+              {Array.from(menuPages, (item, key) => {
+                return (
+                  <li key={key}>
+                    <Link
+                      href={item.path}
+                      className={classNames({
+                        [styles.link__active]: item.path === pathname,
+                        [styles.link]: true,
+                      })}
+                    >
+                      {item.name}
                     </Link>
-                </h1>  
-            </div>
-            <Image
-                className={styles["burger-icon"]}
-                src={Burger}
-                alt="burger menu"
-                onClick={() => {setIsMenuOpened(true)}}
-            ></Image>
-            <div className={
-                    className({
-                        [styles["links-container"]]: true,
-                        [styles["links-container__closed"]]: !isMenuOpenend
-                    })
-            }>
-                <div 
-                    className={styles["close-menu-area"]}
-                    onClick={() => setIsMenuOpened(false)}
-                >
-                </div>
-                <div className={styles.links}>
-                    <nav>
-                        <ul>
-                            <li>
-                                <Link href={"/"}>Home</Link>
-                            </li>
-                            <li>
-                                <Link href={"/projects"}>Projects</Link>
-                            </li>
-                            <li>
-                                <Link href={"/articles"}>Articles</Link>
-                            </li>
-                        </ul>
-                    </nav>
+                  </li>
+                );
+              })}
+            </ul>
+          </nav>
 
-                    <div className={styles.media}>
-                        <Link href="https://www.linkedin.com/in/ljsomm/">
-                            <Image
-                                src={Linkedin}
-                                alt="linkedin"
-                                title="Linkedin"
-                            />
-                        </Link>
-                        <Link href="https://github.com/ljsomm">
-                            <Image
-                                src={Git}
-                                alt="github"
-                                title="Github"
-                            />
-                        </Link>
-                    </div>
-                </div>
-            </div>
-           
-        </header>
-    );
-}
+          <div className={styles.media}>
+            <Link href="https://www.linkedin.com/in/ljsomm/" target="_blank">
+              <Linkedin height="33px" width="33px" />
+            </Link>
+            <Link href="https://github.com/ljsomm" target="_blank">
+              <Github height="33px" width="33px" />
+            </Link>
+          </div>
+        </div>
+      </div>
+    </header>
+  );
+};
 
 export default Header;

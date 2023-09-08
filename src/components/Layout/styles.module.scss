@@ -1,0 +1,14 @@
+@use "../../styles/data" as *;
+@use "sass:map";
+
+.main {
+  @media screen and (max-width: $maxMobile) {
+    height: calc(100vh - map.get($header, "mobile"));
+  }
+  @media screen and (min-width: $minTablet) {
+    height: calc(100vh - map.get($header, "tablet"));
+  }
+  @media screen and (min-width: $minDesktop) {
+    height: calc(100vh - map.get($header, "desktop"));
+  }
+}

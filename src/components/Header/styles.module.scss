@@ -1,159 +1,159 @@
 @use "../../styles/data" as *;
+@use "sass:map";
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-    @media (max-width: $maxMobile) {
-        padding: 20px 25px 0 25px;
+  @media (max-width: $maxMobile) {
+    padding: 20px 25px;
+    height: map.get($header, "mobile");
+  }
+
+  @media (min-width: $minTablet) {
+    padding: 26px 50px;
+    height: map.get($header, "tablet");
+  }
+
+  @media (min-width: $minDesktop) {
+    padding: 30px 100px;
+    height: map.get($header, "desktop");
+  }
+
+  box-sizing: border-box;
+
+  @media (min-width: $minDesktop) {
+    .burger-icon {
+      display: none;
     }
+  }
 
-    @media (min-width: $minTablet) and (max-width: $maxTablet) {
-        padding: 25px 50px 0 50px;
+  .logo {
+    a {
+      color: white;
+      text-decoration: none;
+      transition: 0.5s;
+
+      @media (max-width: $maxMobile) {
+        font-size: 25px;
+      }
+
+      &:hover {
+        text-shadow: 0px 0px 20px white;
+      }
     }
+  }
 
-    @media (min-width: $minDesktop) {
-        padding: 25px 100px 0 100px;
-    }
+  .links-container {
+    @media (max-width: $maxTablet) {
+      &__closed {
+        right: -100vw;
+      }
 
-    box-sizing: border-box;
-
-    @media (min-width: $minDesktop){
-        .burger-icon {
-            display: none;
-        }
-    }
-    
-    .logo {
-        a {
-            color: white;
-            text-decoration: none;
-            transition: 0.5s;
-
-            @media (max-width: $maxMobile) {
-                font-size: 25px;
-            }
-
-            &:hover {
-                text-shadow: 0px 0px 20px white;
-            }
-        }
-    }
-
-    .links-container {
-
-        @media (max-width: $maxTablet) {
-            &__closed {
-                right: -100vw;
-            }
-
-            .close-menu-area {
-                @media (max-width: $maxMobile) {
-                    width: 25%;
-                }
-
-                @media (min-width: $minTablet) and (max-width: $maxTablet) {
-                    width: 45%;
-                }
-                background-color: rgba(0, 0, 0, 0.133);
-            }
-
-            transition: 0.25s;
-            width: 100vw;
-            position: fixed;
-            right: 0;
-            top: 0;
-            height: 100%;
-            display: flex;
-            .links {
-                background: $mainGradient;
-                box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
-
-                @media (max-width: $maxMobile) {
-                    width: 75%;
-                }
-
-                @media (min-width: $minTablet) and (max-width: $maxTablet) {
-                    width: 55%;
-                }
-
-                @media (min-width: $minDesktop) and (max-width: $maxDesktop) {
-                    width: 40%;
-                }
-
-                display: flex;
-                flex-direction: column;
-                justify-content: space-around;
-                align-items: center;
-                nav {
-                    ul {
-                        padding: 0;
-                        li {
-                            display: block;
-                            padding: 20px 0;
-                            text-align: center;
-                        }
-                    }
-                }
-            }
+      .close-menu-area {
+        @media (max-width: $maxMobile) {
+          width: 25%;
         }
 
-        .links {
-            
-            @media (min-width: $minDesktop) {
-                align-items: center;
-                justify-content: space-between;
-
-                width: 50vw;
-               
-                @media (min-width: 1450px) {
-                    width: 40vw;
-                }
-    
-                display: flex;
-    
-                nav {
-                    ul {
-                        li {
-                            display: inline;
-                            padding: 0px 30px;
-                        }
-                    }
-                }
-            }
-          
-            
-            nav {
-                ul {
-                    list-style: none;
-                    li {
-    
-                        font-size: 16px;
-                        a {
-                            color: white;
-                            text-decoration: none;
-                            transition: 0.25s;
-                            &:hover {
-                                text-shadow: 0px 0px 5px white;
-                            }
-                        }
-                    }
-                }
-            }
-        
-            .media {
-                img {
-                    cursor: pointer;
-                    padding: 0px 10px;
-                }
-            }
+        @media (min-width: $minTablet) and (max-width: $maxTablet) {
+          width: 45%;
         }
+        background-color: rgba(0, 0, 0, 0.133);
+      }
+
+      transition: 0.25s;
+      width: 100vw;
+      position: fixed;
+      right: 0;
+      top: 0;
+      height: 100%;
+      display: flex;
+      .links {
+        background: $mainGradient;
+        box-shadow: -1px 0 10px rgba(0, 0, 0, 0.5);
+
+        @media (max-width: $maxMobile) {
+          width: 75%;
+        }
+
+        @media (min-width: $minTablet) and (max-width: $maxTablet) {
+          width: 55%;
+        }
+
+        @media (min-width: $minDesktop) and (max-width: $maxDesktop) {
+          width: 40%;
+        }
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        nav {
+          ul {
+            padding: 0;
+            li {
+              display: block;
+              padding: 20px 0;
+              text-align: center;
+
+            }
+          }
+        }
+      }
     }
 
-   
+    .links {
+      @media (min-width: $minDesktop) {
+        align-items: center;
+        justify-content: space-between;
 
-    
+        width: 50vw;
 
+        @media (min-width: 1450px) {
+          width: 40vw;
+        }
 
+        display: flex;
+
+        nav {
+          ul {
+            li {
+              display: inline;
+              padding: 0px 30px;
+            }
+          }
+        }
+      }
+
+      nav {
+        ul {
+          list-style: none;
+          li {
+            font-size: 16px;
+            .link {
+              color: white;
+              text-decoration: none;
+              transition: 0.25s;
+              &:hover {
+                text-shadow: 0px 0px 5px white;
+              }
+
+              &__active {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+      }
+
+      .media {
+        img,
+        svg {
+          cursor: pointer;
+          padding: 0px 10px;
+        }
+      }
+    }
+  }
 }
