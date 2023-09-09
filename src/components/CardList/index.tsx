@@ -1,4 +1,4 @@
-import { ICard } from "@/interfaces/card-interfaces";
+import { ICard } from "@/interfaces/card";
 import VerticalCard from "../VerticalCard";
 import styles from "./styles.module.scss";
 const cardTypes = {

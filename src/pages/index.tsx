@@ -4,7 +4,8 @@ import styles from "./styles.module.scss";
 import CardList from "@/components/CardList";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
-const Home = () => {
+import { IPageProps } from "@/interfaces/page";
+const Home = ({titlePrefix} : IPageProps) => {
   const ref = useRef(null);
   const jobs = [
     {
@@ -24,7 +25,7 @@ const Home = () => {
   return (
     <>
       <Head>
-        <title>Home</title>
+        <title>{titlePrefix}</title>
       </Head>
       <div ref={ref} className={styles["main-content"]}>
         <VariableText textList={jobs}></VariableText>
