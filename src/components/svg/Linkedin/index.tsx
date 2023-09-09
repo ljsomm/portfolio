@@ -1,6 +1,14 @@
 import styles from "./styles.module.scss";
 
-const Linkedin = ({height, width, color = 'white'} :  {height:string; width:string; color?: string} ) => {
+const Linkedin = ({
+  height,
+  width,
+  color = "white",
+}: {
+  height: string;
+  width: string;
+  color?: string;
+}) => {
   return (
     <svg
       className={styles.svg}

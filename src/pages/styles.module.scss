@@ -8,5 +8,11 @@
 .section {
   height: 100vh;
   color: black;
-  background-color: rgb(234, 234, 234);
+
+  .description {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+  }
 }
