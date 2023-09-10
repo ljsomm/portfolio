@@ -1,0 +1,13 @@
+@use "../../../styles/data" as *;
+
+.svg {
+  @media screen and (max-width: $maxMobile) {
+    height: 400px;
+    width: 400px;
+  }
+
+  @media screen and (min-width: $minTablet) {
+    height: 500px;
+    width: 500px;
+  }
+}

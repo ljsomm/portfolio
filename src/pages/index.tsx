@@ -5,8 +5,9 @@ import CardList from "@/components/CardList";
 import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { IPageProps } from "@/interfaces/page";
-const Home = ({titlePrefix} : IPageProps) => {
-  const ref = useRef(null);
+import Presentation from "@/components/svg/Presentation";
+
+const Home = ({ titlePrefix }: IPageProps) => {
   const jobs = [
     {
       mainText: "Web Developer",
@@ -18,19 +19,15 @@ const Home = ({titlePrefix} : IPageProps) => {
     },
   ];
 
-  useEffect(() => {
-    console.log(ref.current);
-  }, [ref]);
-
   return (
     <>
       <Head>
         <title>{titlePrefix}</title>
       </Head>
-      <div ref={ref} className={styles["main-content"]}>
+      <section className={styles["main-content"]}>
         <VariableText textList={jobs}></VariableText>
-      </div>
-      <div className={styles["section"]}>
+      </section>
+      <section className={styles["section"]}>
         <CardList
           type="vertical"
           data={[
@@ -113,7 +110,22 @@ const Home = ({titlePrefix} : IPageProps) => {
             },
           ]}
         ></CardList>
-      </div>
+      </section>
+      <section className={styles.section}>
+        <div>
+          <h3 className={styles.title}>Going beyond</h3>
+          <p className={styles.paragraph}>
+            Although I am a developer, I love helping people to ascend in their
+            careers. Every time I have the chance, I’m always going to do that.
+          </p>
+          <p className={styles.paragraph}>
+            I also read some articles, you can check them here.
+          </p>
+        </div>
+        <div>
+          <Presentation />
+        </div>
+      </section>
     </>
   );
 };

@@ -1,3 +1,5 @@
+@use "../styles/data" as *;
+
 .main-content {
   height: 98%;
   display: flex;
@@ -6,8 +8,27 @@
 }
 
 .section {
-  height: 100vh;
-  color: black;
+  &:nth-child(3) {
+    height: 100vh;
+
+    @media screen and (max-width: $maxTablet) {
+      @include flex(space-around, center, column);
+      padding: 50px 0;
+      .title,
+      .paragraph {
+        padding: 0px 25px;
+      }
+    }
+    @media screen and (min-width: $minDesktop) {
+      @include flex(center);
+      gap: 30px;
+    }
+
+    .title,
+    .paragraph {
+      margin-bottom: 10px;
+    }
+  }
 
   .description {
     display: flex;

@@ -5,7 +5,7 @@
   @media screen and (min-width: $minMobile) and (max-width: $maxTablet) {
     gap: 30px;
     grid-template-columns: 80vw;
-  } 
+  }
   @media screen and (min-width: $minDesktop) {
     gap: 5vw;
     grid-template-columns: 350px 350px 350px;
