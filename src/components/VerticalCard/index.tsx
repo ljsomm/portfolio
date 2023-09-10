@@ -1,21 +1,38 @@
 import { ICard } from "@/interfaces/card";
 import styles from "./styles.module.scss";
 import React, { useEffect, useRef } from "react";
-import { useInView } from "framer-motion";
+import { useAnimate, useInView } from "framer-motion";
 
 const VerticalCard = ({ title, description }: ICard) => {
 
-
-  const ref = useRef(null);
-  const visibile = useInView(ref);
+  const [target, animate] = useAnimate();
+  const visibile = useInView(target);
 
   useEffect(() => {
-    console.log(visibile)
+    if(!!visibile) {
+      animate(target.current, {
+        opacity: 1,
+        x: 0
+      }, {
+        duration: 1
+      });
+    }
+    else {
+      animate(target.current, {
+        opacity: 0,
+        x: -5
+      }, {
+        duration: 1
+      });
+    }
   }, [visibile]);
+
   return (
-    <div ref={ref} className={styles["card"]}>
+    <div  className={styles["card"]}>
       <h3 className={styles.title}>{title}</h3>
-      {description}
+      <div ref={target} className={styles.description}>
+        {description}
+      </div>
     </div>
   );
 };
