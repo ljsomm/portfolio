@@ -5,7 +5,6 @@ const Error = ({ statusCode }: { statusCode: any }) => {
 };
 
 Error.getInitialProps = (ctx: NextPageContext) => {
-  console.log(ctx.res);
   return {
     statusCode: ctx.res?.statusCode,
     sai: true,

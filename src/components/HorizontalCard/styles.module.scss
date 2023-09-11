@@ -1,0 +1,21 @@
+.container {
+  padding: 20px;
+  transition: 0.25s;
+  background-color: rgb(39, 38, 40);
+  border-radius: 5px;
+
+  .title {
+    margin-bottom: 5px;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.878);
+  }
+
+  margin-bottom: 15px;
+}
+
+.link {
+  color: white;
+  text-decoration: none;
+}

@@ -8,12 +8,14 @@
 }
 
 .section {
+  padding: 0 100px;
   &:nth-child(3) {
     height: 100vh;
 
     @media screen and (max-width: $maxTablet) {
       @include flex(space-around, center, column);
       padding: 50px 0;
+
       .title,
       .paragraph {
         padding: 0px 25px;
@@ -22,11 +24,24 @@
     @media screen and (min-width: $minDesktop) {
       @include flex(center);
       gap: 30px;
+
+      .title {
+        margin-bottom: 25px;
+      }
     }
 
-    .title,
+    @media screen and (max-width: $maxTablet) {
+      .title {
+        margin-bottom: 10px;
+      }
+    }
+
     .paragraph {
       margin-bottom: 10px;
+    }
+
+    .title {
+      font-size: 25px;
     }
   }
 
@@ -35,5 +50,10 @@
     flex-direction: column;
     justify-content: space-around;
     height: 100%;
+  }
+
+  a {
+    color: rgb(9, 207, 207);
+    text-decoration: none;
   }
 }

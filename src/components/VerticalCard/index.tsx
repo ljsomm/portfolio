@@ -3,7 +3,7 @@ import styles from "./styles.module.scss";
 import React, { useEffect, useRef } from "react";
 import { useAnimate, useInView } from "framer-motion";
 
-const VerticalCard = ({ title, description }: ICard) => {
+const VerticalCard = ({ key, title, description }: ICard) => {
   const [target, animate] = useAnimate();
   const visibile = useInView(target);
 
@@ -34,7 +34,7 @@ const VerticalCard = ({ title, description }: ICard) => {
   }, [visibile]);
 
   return (
-    <div className={styles["card"]}>
+    <div key={key} className={styles["card"]}>
       <h3 className={styles.title}>{title}</h3>
       <div ref={target} className={styles.description}>
         {description}

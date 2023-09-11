@@ -6,8 +6,14 @@ import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { IPageProps } from "@/interfaces/page";
 import Presentation from "@/components/svg/Presentation";
+import { useAnimate, useInView } from "framer-motion";
+import useLateralFadeIn from "@/hooks/useLateralFadeIn";
+import Link from "next/link";
 
 const Home = ({ titlePrefix }: IPageProps) => {
+  const targetText = useLateralFadeIn(-10, 1);
+  const targetImage = useLateralFadeIn(10, 1);
+
   const jobs = [
     {
       mainText: "Web Developer",
@@ -112,17 +118,22 @@ const Home = ({ titlePrefix }: IPageProps) => {
         ></CardList>
       </section>
       <section className={styles.section}>
-        <div>
+        <div ref={targetText}>
           <h3 className={styles.title}>Going beyond</h3>
           <p className={styles.paragraph}>
-            Although I am a developer, I love helping people to ascend in their
-            careers. Every time I have the chance, I’m always going to do that.
+            Hello World, I'm Lucas Juan Souza, a FullStack Developer!
           </p>
           <p className={styles.paragraph}>
-            I also read some articles, you can check them here.
+            Although I am Developer I also love helping people to ascend in
+            their careers. Every time I have the chance, I do presentations for
+            students and newer coleagues in this amazing IT's world.
+          </p>
+          <p className={styles.paragraph}>
+            I also read some articles, you can check them{" "}
+            <Link href={"/articles"}>here</Link>.
           </p>
         </div>
-        <div>
+        <div ref={targetImage}>
           <Presentation />
         </div>
       </section>

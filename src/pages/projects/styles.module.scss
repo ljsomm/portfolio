@@ -1,3 +1,14 @@
+@use "../../styles/data" as *;
+
 .container {
-  height: 100%;
+  @media screen and (max-width: $maxTablet) {
+    padding: 50px;
+  }
+  @media screen and (min-width: $minDesktop) {
+    padding: 50px 100px;
+  }
+  .title {
+    margin-bottom: 25px;
+    color: rgba(255, 255, 255, 0.933);
+  }
 }

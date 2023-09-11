@@ -61,6 +61,7 @@ const Header = () => {
                 return (
                   <li key={key}>
                     <Link
+                      onClick={() => setIsMenuOpened(false)}
                       href={item.path}
                       className={classNames({
                         [styles.link__active]: item.path === pathname,

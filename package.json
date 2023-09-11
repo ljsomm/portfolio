@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev -p 3030",
+    "dev": "next dev",
     "build": "next build",
     "start": "next start",
     "start:local": "next build & next start",
@@ -20,6 +20,7 @@
     "prettier": "^3.0.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
+    "rss-parser": "^3.13.0",
     "sass": "^1.66.1",
     "typescript": "5.2.2"
   }
