@@ -4,11 +4,11 @@ import { ICard } from "@/interfaces/card";
 import { IPageProps } from "@/interfaces/page";
 import Head from "next/head";
 
-const Projects = ({ data, titlePrefix }: { data: ICard[] } & IPageProps) => {
+const Projects = ({ data }: { data: ICard[] }) => {
   return (
     <>
       <Head>
-        <title>{titlePrefix} - Projects</title>
+        <title>Lucas Juan - Projects</title>
       </Head>
       <section className={styles.container}>
         <h3 className={styles.title}>Projects</h3>

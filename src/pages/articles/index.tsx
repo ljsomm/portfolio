@@ -2,11 +2,11 @@ import { IPageProps } from "@/interfaces/page";
 import styles from "./styles.module.scss";
 import Head from "next/head";
 
-const Articles = ({ titlePrefix }: IPageProps) => {
+const Articles = () => {
   return (
     <>
       <Head>
-        <title>{titlePrefix} - Projects</title>
+        <title>Lucas Juan - Projects</title>
       </Head>
       <section className={styles.container}>
         <h3 className={styles.title}>Articles</h3>
