@@ -25,6 +25,10 @@
       @include flex(center);
       gap: 30px;
 
+      .paragraph {
+        max-width: 550px;
+      }
+
       .title {
         margin-bottom: 25px;
       }

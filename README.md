@@ -9,4 +9,12 @@
 <ul>
     <li>NextJS</li>
     <li>SCSS</li>
+    <li>Framer-Motion</li>
+</ul>
+
+## External Services
+
+<ul>
+    <li>GitHub API</li>
+    <li>Medium's RSS Endpoint</li>
 </ul>
