@@ -20,7 +20,7 @@ const Projects = ({ data }: { data: ICard[] }) => {
 
 export default Projects;
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
   const res = await fetch("https://api.github.com/users/ljsomm/repos", {
     headers: {
       authorization: `Bearer ${process.env.GITHUB_JWT}`,
@@ -35,10 +35,10 @@ export async function getServerSideProps() {
         link: item.html_url,
       };
     });
-
   return {
     props: {
       data,
     },
+    revalidate: 3600
   };
 }
