@@ -1,17 +1,20 @@
-import {Head, NextScript, Main, Html} from "next/document";
+import { Head, NextScript, Main, Html } from "next/document";
 const Document = () => {
-  return(
+  return (
     <Html>
       <Head>
         <link rel="canonical" href="https://lucasjsdev.com/" />
-        <meta name="description" content="Site developed by Lucas Juan Souza de Oliviera Miranda Moraes, Software Engineer."></meta>
+        <meta
+          name="description"
+          content="Site developed by Lucas Juan Souza de Oliviera Miranda Moraes, Software Engineer."
+        ></meta>
       </Head>
       <body>
-        <Main/>
-        <NextScript/>
+        <Main />
+        <NextScript />
       </body>
     </Html>
   );
-}
+};
 
 export default Document;

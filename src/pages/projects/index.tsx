@@ -1,7 +1,6 @@
 import CardList from "@/components/CardList";
 import styles from "./styles.module.scss";
 import { ICard } from "@/interfaces/card";
-import { IPageProps } from "@/interfaces/page";
 import Head from "next/head";
 
 const Projects = ({ data }: { data: ICard[] }) => {
@@ -21,11 +20,14 @@ const Projects = ({ data }: { data: ICard[] }) => {
 export default Projects;
 
 export async function getStaticProps() {
-  const res = await fetch("https://api.github.com/users/ljsomm/repos", {
-    headers: {
-      authorization: `Bearer ${process.env.GITHUB_JWT}`,
+  const res = await fetch(
+    "https://api.github.com/users/ljsomm/repos?type=all",
+    {
+      headers: {
+        authorization: `Bearer ${process.env.GITHUB_JWT}`,
+      },
     },
-  });
+  );
   const data: ICard[] = (await res.json())
     .filter((item: any) => !!item.topics.includes("portfolio-project"))
     .map((item: any) => {
@@ -39,6 +41,6 @@ export async function getStaticProps() {
     props: {
       data,
     },
-    revalidate: 3600
+    revalidate: 3600,
   };
 }
