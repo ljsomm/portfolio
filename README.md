@@ -2,7 +2,12 @@
 
 <p>In this repository i'm going to keep the source code of my portfolio.</p>
 
-<p>You can access it <a href="https://portfolio-flame-eight-85.vercel.app/">here</a></p>
+<p>You can access it <a href="https://www.lucasjsdev.com/">here</a></p>
+
+
+## Preview
+
+![image](https://github.com/ljsomm/portfolio/assets/48564798/621d17d5-597f-41d5-a855-8ad8e5c03486)
 
 ## Technologies
 
