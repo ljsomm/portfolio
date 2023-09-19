@@ -21,7 +21,7 @@ export default Projects;
 
 export async function getStaticProps() {
   const res = await fetch(
-    "https://api.github.com/users/ljsomm/repos?type=all&sort=updated",
+    "https://api.github.com/users/ljsomm/repos?type=all&sort=created",
     {
       headers: {
         authorization: `Bearer ${process.env.GITHUB_JWT}`,
