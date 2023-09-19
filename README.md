@@ -2,7 +2,7 @@
 
 <p>In this repository i'm going to keep the source code of my portfolio.</p>
 
-<p>You can access it <a href="https://www.lucasjsdev.com/">here</a></p>
+<p>You can access it <a target="_blank" href="https://www.lucasjsdev.com/">here</a></p>
 
 
 ## Preview
