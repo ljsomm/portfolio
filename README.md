@@ -1,15 +1,10 @@
-# Lucas Juan's portfolio
+# Lucas Juan's portfolio :coffee:
 
 <p>In this repository i'm going to keep the source code of my portfolio.</p>
 
-<p>You can access it <a target="_blank" href="https://www.lucasjsdev.com/">here</a></p>
+<p>You can access it <a target="_blank" href="https://www.lucasjsdev.com/">here</a> :fire:</p> 
 
-
-## Preview
-
-![image](https://github.com/ljsomm/portfolio/assets/48564798/621d17d5-597f-41d5-a855-8ad8e5c03486)
-
-## Technologies
+## Technologies 
 
 <ul>
     <li>NextJS</li>
