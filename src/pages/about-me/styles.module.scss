@@ -9,19 +9,18 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100%;
+    min-height: 100%;
 
     @media screen and (max-width: $maxTablet) {
       flex-direction: column;
-      padding: 0 50px;
+      padding: 50px;
       gap: 50px;
 
       img {
-        height: 350px;
-        width: 350px;
+        height: 300px;
+        width: 300px;
       }
     }
-
 
     @media screen and (min-width: $minDesktop) {
       padding: 0 20px;
@@ -29,9 +28,15 @@
     }
 
     div {
+
+      h2 {
+        color: rgb(237, 237, 237)
+      }
+
       p {
         margin-top: 15px;
         max-width: 650px;
+        color: rgb(237, 237, 237);
       }
   
       img {
