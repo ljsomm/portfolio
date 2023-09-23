@@ -14,15 +14,14 @@ const Header = () => {
     {
       name: "Home",
       path: "/",
-      isMenuGradient: true,
     },
     {
       name: "Projects",
       path: "/projects",
     },
     {
-      name: "Articles",
-      path: "/articles",
+      name: "About me",
+      path: "/about-me",
     },
   ];
 
