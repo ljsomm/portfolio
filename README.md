@@ -10,11 +10,11 @@
     <li>NextJS</li>
     <li>SCSS</li>
     <li>Framer-Motion</li>
+    <li>Prettier</li>
 </ul>
 
 ## External Services
 
 <ul>
     <li>GitHub API</li>
-    <li>Medium's RSS Endpoint</li>
 </ul>
