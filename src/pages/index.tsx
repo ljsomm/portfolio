@@ -130,7 +130,7 @@ const Home = ({ titlePrefix }: IPageProps) => {
           </p>
           <p className={styles.paragraph}>
             I continuously write some articles, you can check them{" "}
-            <Link href={"https://medium.com/@lucasjuansomm"}>here</Link>.
+            <Link target="_blank" href={"https://medium.com/@lucasjuansomm"}>here</Link>.
           </p>
         </div>
         <div ref={targetImage}>
