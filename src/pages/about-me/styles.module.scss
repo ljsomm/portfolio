@@ -2,7 +2,6 @@
 @use "sass:map";
 
 .container {
-
   height: calc(100vh - map.get($header, "desktop"));
 
   .splitted-content {
@@ -28,9 +27,8 @@
     }
 
     div {
-
       h2 {
-        color: rgb(237, 237, 237)
+        color: rgb(237, 237, 237);
       }
 
       p {
@@ -38,7 +36,7 @@
         max-width: 650px;
         color: rgb(237, 237, 237);
       }
-  
+
       img {
         border-radius: 100%;
         box-shadow: 1px 1px 10px rgb(26, 26, 26);

@@ -129,8 +129,8 @@ const Home = ({ titlePrefix }: IPageProps) => {
             students and newer coleagues in this amazing IT's world.
           </p>
           <p className={styles.paragraph}>
-            I also read some articles, you can check them{" "}
-            <Link href={"/articles"}>here</Link>.
+            I contiunuosly write some articles, you can check them{" "}
+            <Link href={"https://medium.com/@lucasjuansomm"}>here</Link>.
           </p>
         </div>
         <div ref={targetImage}>
