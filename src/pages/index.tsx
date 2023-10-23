@@ -21,7 +21,11 @@ const Home = ({ titlePrefix }: IPageProps) => {
     },
     {
       mainText: "Application Developer",
-      subText: "IBM, 2021 - Present",
+      subText: "IBM, 2021 - 2023",
+    },
+    {
+      mainText: "Senior Application Developer",
+      subText: "ZUP, 2023 - Present",
     },
   ];
 
