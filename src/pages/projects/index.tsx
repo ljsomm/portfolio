@@ -28,7 +28,8 @@ export async function getStaticProps() {
       },
     },
   );
-  const data: ICard[] = (await res.json())
+  const responseData: ICard[] = await res.json();
+  const data: ICard[] = responseData
     .filter((item: any) => !!item.topics.includes("portfolio-project"))
     .map((item: any) => {
       return {
