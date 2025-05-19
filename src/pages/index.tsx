@@ -2,11 +2,9 @@ import VariableText from "@/components/VariableText";
 import Head from "next/head";
 import styles from "./styles.module.scss";
 import CardList from "@/components/CardList";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { IPageProps } from "@/interfaces/page";
 import Presentation from "@/components/svg/Presentation";
-import { useAnimate, useInView } from "framer-motion";
 import useLateralFadeIn from "@/hooks/useLateralFadeIn";
 import Link from "next/link";
 
@@ -21,7 +19,19 @@ const Home = ({ titlePrefix }: IPageProps) => {
     },
     {
       mainText: "Application Developer",
-      subText: "IBM, 2021 - Present",
+      subText: "IBM, 2021 - 2023",
+    },
+    {
+      mainText: "Senior Application Developer",
+      subText: "ZUP, 2023 - 2024",
+    },
+    {
+      mainText: "Senior Serverless Developer",
+      subText: "Serverless Guru, 2024 - 2025",
+    },
+    {
+      mainText: "Lead Serverless Developer",
+      subText: "Serverless Guru, 2025 - Present",
     },
   ];
 
@@ -129,8 +139,11 @@ const Home = ({ titlePrefix }: IPageProps) => {
             students and newer coleagues in this amazing IT's world.
           </p>
           <p className={styles.paragraph}>
-            I also read some articles, you can check them{" "}
-            <Link href={"/articles"}>here</Link>.
+            I continuously write some articles, you can check them{" "}
+            <Link target="_blank" href={"https://medium.com/@lucasjuansomm"}>
+              here
+            </Link>
+            .
           </p>
         </div>
         <div ref={targetImage}>

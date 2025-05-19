@@ -8,7 +8,8 @@
     "start": "next start",
     "start:local": "next build & next start",
     "prettier": "prettier -w ./src",
-    "lint": "next lint"
+    "lint": "next lint",
+    "prepare": "husky"
   },
   "dependencies": {
     "@types/node": "20.5.7",
@@ -16,12 +17,15 @@
     "@types/react-dom": "18.2.7",
     "classnames": "^2.3.2",
     "framer-motion": "^10.16.4",
-    "next": "13.4.19",
-    "prettier": "^3.0.3",
+    "next": "^13.5.11",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "rss-parser": "^3.13.0",
     "sass": "^1.66.1",
     "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "prettier": "^3.0.3"
   }
 }

@@ -1,6 +1,6 @@
 import { ICard } from "@/interfaces/card";
 import styles from "./styles.module.scss";
-import React, { useEffect, useRef } from "react";
+import React, { useEffect } from "react";
 import { useAnimate, useInView } from "framer-motion";
 
 const VerticalCard = ({ key, title, description }: ICard) => {

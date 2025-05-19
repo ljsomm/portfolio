@@ -7,7 +7,6 @@ const useLateralFadeIn = (distance: number, duration: number = 1) => {
 
   useEffect(() => {
     if (!!isInView && !!target.current) {
-      console.log(target.current);
       !!target.current &&
         animate(
           target.current,
