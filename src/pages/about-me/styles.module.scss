@@ -1,0 +1,46 @@
+@use "../../styles/data" as *;
+@use "sass:map";
+
+.container {
+  height: calc(100vh - map.get($header, "desktop"));
+
+  .splitted-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+
+    @media screen and (max-width: $maxTablet) {
+      flex-direction: column;
+      padding: 50px;
+      gap: 50px;
+
+      img {
+        height: 300px;
+        width: 300px;
+      }
+    }
+
+    @media screen and (min-width: $minDesktop) {
+      padding: 0 20px;
+      gap: 100px;
+    }
+
+    div {
+      h2 {
+        color: rgb(237, 237, 237);
+      }
+
+      p {
+        margin-top: 15px;
+        max-width: 650px;
+        color: rgb(237, 237, 237);
+      }
+
+      img {
+        border-radius: 100%;
+        box-shadow: 1px 1px 10px rgb(26, 26, 26);
+      }
+    }
+  }
+}
