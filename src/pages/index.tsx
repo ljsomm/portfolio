@@ -2,11 +2,9 @@ import VariableText from "@/components/VariableText";
 import Head from "next/head";
 import styles from "./styles.module.scss";
 import CardList from "@/components/CardList";
-import { useEffect, useRef } from "react";
 import Image from "next/image";
 import { IPageProps } from "@/interfaces/page";
 import Presentation from "@/components/svg/Presentation";
-import { useAnimate, useInView } from "framer-motion";
 import useLateralFadeIn from "@/hooks/useLateralFadeIn";
 import Link from "next/link";
 
@@ -29,7 +27,11 @@ const Home = ({ titlePrefix }: IPageProps) => {
     },
     {
       mainText: "Senior Serverless Developer",
-      subText: "SG, 2024 - Present",
+      subText: "Serverless Guru, 2024 - 2025",
+    },
+    {
+      mainText: "Lead Serverless Developer",
+      subText: "Serverless Guru, 2025 - Present",
     },
   ];
 
